@@ -6,6 +6,6 @@
   tasks:
   - name: create directory
     file:
-      name: /home/centos/new_dir
+      path: /home/centos/new_dir
       state: directory
 ...
