@@ -1,0 +1,13 @@
+# ansible n1 -m file -a "path=/home/centos/n1_dir state=directory"
+---
+- name: static page
+  hosts: g1
+  become: yes
+
+  tasks:
+  - name: update static page
+    copy:
+      src: static.html
+      dest: /var/www/html/static.html
+      force: yes
+...

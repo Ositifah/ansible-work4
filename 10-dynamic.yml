@@ -1,0 +1,13 @@
+# ansible n1 -m file -a "path=/home/centos/n1_dir state=directory"
+---
+- name: dynamic page
+  hosts: g1
+  become: yes
+
+  tasks:
+  - name: update dynamic page
+    template:
+      src: dynamic.j2
+      dest: /var/www/html/dynamic.html
+      force: yes
+...
